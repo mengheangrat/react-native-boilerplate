@@ -1,10 +1,9 @@
-import {createStore, combineReducers} from 'redux';
-
+import {combineReducers} from 'redux';
 import configureStore from './store';
 
 /* ------------- Assemble The Reducers ------------- */
 export const reducers = combineReducers({
-  auth: require('./AuthenticationRedux').reducer,
+  auth: require('./AuthRedux').reducer,
 });
 
 export default () => {

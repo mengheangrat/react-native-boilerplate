@@ -4,10 +4,12 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
 import AuthStack from './AuthStack';
+import {useDispatch} from 'react-redux';
 
 const RootStack = createStackNavigator();
 
 function RootNavigationContainer() {
+  const dispatch = useDispatch();
   return (
     <NavigationContainer>
       <RootStack.Navigator>
