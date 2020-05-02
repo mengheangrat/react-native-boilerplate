@@ -13,7 +13,7 @@ const {Types, Creators} = createActions({
   loginRequest: ['token'],
 });
 
-export const AuthenticationTypes = Types;
+export const AuthTypes = Types;
 export default Creators;
 
 /* ------------- Initial State ------------- */
@@ -36,5 +36,5 @@ export const request = (state: AuthType, action: AnyAction) => {
 };
 
 export const reducer = createReducer(INITIAL_STATE, {
-  LOGIN_REQUEST: request,
+  [Types.LOGIN_REQUEST as string]: request,
 });

@@ -9,7 +9,7 @@ export const reducers = combineReducers({
 export default () => {
   const finalReducers = reducers;
 
-  const {store} = configureStore(finalReducers);
+  let {store} = configureStore(finalReducers);
 
   return store;
 };
