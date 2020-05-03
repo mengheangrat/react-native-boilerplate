@@ -7,17 +7,18 @@ import AuthActions, {AuthSelectors} from '../Redux/AuthRedux';
 
 function LoginScreen() {
   const dispatch = useDispatch();
-  const tokenSelector = useSelector(AuthSelectors.getToken);
+  const userInfo = useSelector(AuthSelectors.getUserInfo);
   const {token} = useSelector((state: RootStateOrAny) => state.auth);
+  const {user} = useSelector((state: RootStateOrAny) => state.auth);
 
   return (
     <View>
-      <Text>{token}</Text>
-      <Text>{tokenSelector}</Text>
+      <Text>{user.name}</Text>
+      <Text>{user.gender}</Text>
 
       <Button
-        title="Change Token"
-        onPress={() => dispatch(AuthActions.loginRequest('newpppptoken'))}
+        title="Get user info"
+        onPress={() => dispatch(AuthActions.loginRequest())}
       />
     </View>
   );

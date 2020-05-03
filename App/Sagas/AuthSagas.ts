@@ -11,12 +11,14 @@
  *************************************************************/
 
 import {call, put, delay} from 'redux-saga/effects';
-import AuthActions, {AuthType} from '../Redux/AuthRedux';
+import AuthActions from '../Redux/AuthRedux';
 
 import {AnyAction} from 'redux';
+import {api} from '../Services/Api';
 
 export function* requestLogin(action: AnyAction) {
-  //   const {data} = action.data;
-  //   try {
-  //   } catch (err) {}
+  try {
+    const respond = yield call(api().getCustomer);
+    yield put(AuthActions.loginSuccess(respond.data));
+  } catch (err) {}
 }
