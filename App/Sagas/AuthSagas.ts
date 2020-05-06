@@ -10,11 +10,11 @@
  *    you'll need to define a constant in that file.
  *************************************************************/
 
-import {call, put, delay} from 'redux-saga/effects';
+import { call, put } from 'redux-saga/effects';
 import AuthActions from '../Redux/AuthRedux';
 
-import {AnyAction} from 'redux';
-import {api} from '../Services/Api';
+import { AnyAction } from 'redux';
+import { api } from '../Services/Api';
 
 export function* requestLogin(action: AnyAction) {
   try {

@@ -1,13 +1,13 @@
-import {RootStateOrAny} from 'react-redux';
-import {createReducer, createActions, createTypes} from 'reduxsauce';
+import { RootStateOrAny } from 'react-redux';
+import { createReducer, createActions } from 'reduxsauce';
 import Immutable from 'seamless-immutable';
-import {createSelector} from 'reselect';
-import {AnyAction} from 'redux';
-import {AuthType} from './Types/AuthType';
+import { createSelector } from 'reselect';
+import { AnyAction } from 'redux';
+import { AuthType } from './Types/AuthType';
 
 /* ------------- Types and Action Creators ------------- */
 
-const {Types, Creators} = createActions({
+const { Types, Creators } = createActions({
   loginRequest: null,
   loginSuccess: ['user'],
   loginFailure: null,
@@ -20,7 +20,7 @@ export default Creators;
 
 export const INITIAL_STATE: AuthType = Immutable({
   token: 'my token',
-  user: {name: '', gender: '', id: ''},
+  user: { name: '', gender: '', id: '' },
   fetching: false,
 });
 
@@ -34,17 +34,17 @@ export const AuthSelectors = {
 
 /* ------------- Reducers ------------- */
 export const request = (state: AuthType) => {
-  return {...state, fetching: true};
+  return { ...state, fetching: true };
 };
 
 export const success = (state: AuthType, action: AnyAction) => {
-  const {user} = action;
+  const { user } = action;
 
-  return {...state, user: user, fetching: false};
+  return { ...state, user: user, fetching: false };
 };
 
 export const failure = (state: AuthType) => {
-  return {...state, fetching: false};
+  return { ...state, fetching: false };
 };
 
 export const reducer = createReducer(INITIAL_STATE, {
