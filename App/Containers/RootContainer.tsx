@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StatusBar, Text} from 'react-native';
+import { View, StatusBar } from 'react-native';
 
 export default function RootContainer() {
   return (

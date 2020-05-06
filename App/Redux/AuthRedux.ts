@@ -28,8 +28,14 @@ export const INITIAL_STATE: AuthType = Immutable({
 const authReducer = (state: RootStateOrAny) => state.auth;
 
 export const AuthSelectors = {
-  getToken: createSelector(authReducer, auth => auth.token),
-  getUserInfo: createSelector(authReducer, auth => auth.user),
+  getToken: createSelector(
+    authReducer,
+    auth => auth.token,
+  ),
+  getUserInfo: createSelector(
+    authReducer,
+    auth => auth.user,
+  ),
 };
 
 /* ------------- Reducers ------------- */

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Provider} from 'react-redux';
+import { Provider } from 'react-redux';
 import RootContainer from './Containers/RootContainer';
 import createStore from './Redux';
 

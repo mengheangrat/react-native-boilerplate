@@ -1,4 +1,4 @@
-import {combineReducers} from 'redux';
+import { combineReducers } from 'redux';
 import configureStore from './store';
 
 /* ------------- Assemble The Reducers ------------- */
@@ -9,7 +9,7 @@ export const reducers = combineReducers({
 export default () => {
   const finalReducers = reducers;
 
-  let {store} = configureStore(finalReducers);
+  let { store } = configureStore(finalReducers);
 
   return store;
 };
