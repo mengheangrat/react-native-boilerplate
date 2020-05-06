@@ -13,11 +13,13 @@
 import { call, put } from 'redux-saga/effects';
 import AuthActions from '../Redux/AuthRedux';
 
-import { AnyAction } from 'redux';
+// import { AnyAction } from 'redux';
 import { api } from '../Services/Api';
 
-export function* requestLogin(action: AnyAction) {
+// action: AnyAction
+export function* requestLogin() {
   try {
+    // const data = action;
     const respond = yield call(api().getCustomer);
     yield put(AuthActions.loginSuccess(respond.data));
   } catch (err) {}
