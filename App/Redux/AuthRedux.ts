@@ -25,7 +25,7 @@ export const INITIAL_STATE: AuthType = Immutable({
 });
 
 /* ------------- Selectors ------------- */
-const authReducer = (state: RootStateOrAny) => state.auth;
+const authReducer = (state: RootStateOrAny): AuthType => state.auth;
 
 export const AuthSelectors = {
     getToken: createSelector(authReducer, (auth) => auth.token),
@@ -33,16 +33,16 @@ export const AuthSelectors = {
 };
 
 /* ------------- Reducers ------------- */
-export const request = (state: AuthType) => {
+export const request = (state: AuthType): AuthType => {
     return { ...state, fetching: true };
 };
 
-export const success = (state: AuthType, action: AnyAction) => {
+export const success = (state: AuthType, action: AnyAction): AuthType => {
     const { user } = action;
     return { ...state, user, fetching: false };
 };
 
-export const failure = (state: AuthType) => {
+export const failure = (state: AuthType): AuthType => {
     return { ...state, fetching: false };
 };
 

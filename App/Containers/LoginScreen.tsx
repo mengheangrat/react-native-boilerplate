@@ -15,7 +15,6 @@ function LoginScreen() {
         <View>
             <Text>{userInfo.name}</Text>
             <Text>{user.gender}</Text>
-
             <Button title="Get user info" onPress={() => dispatch(AuthActions.loginRequest())} />
         </View>
     );
