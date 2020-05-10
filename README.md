@@ -17,7 +17,7 @@ To create a new project:
 ## Content
 
 The boilerplate contains:
-* a React Native (v0.62.2)
+* React Native (v0.62.2)
 * Redux (v4.0.5) to help manage state
 * Redux Persist (v6.0.0) to persist the Redux state
 * Redux Sagas (v1.1.3) to separate side-effects and logic from state and View
@@ -25,6 +25,22 @@ The boilerplate contains:
 * apisauce (1.1.1)
 * reduxsauce (v1.0.1) to facilitate using Redux
 * reselect (v4.0.0)
+
+## Directory
+
+* [`App/Components`](App/Components): presentational components
+* [`App/Config`](App/Config): configuration of the application
+* [`App/Containers`](App/Containers): container components, i.e. the application's screens
+* [`App/Assets`](App/Assets): assets (image, audio files, ...) used by the application
+* [`App/Navigators`](App/Navigators): react navigation navigators 
+* [`App/Sagas`](App/Sagas): redux sagas
+* [`App/Services`](App/Services): application services, e.g. API clients
+* [`App/Stores`](App/Stores): redux [actions, reducers and stores](https://redux.js.org/basics)
+* [`App/Theme`](App/Theme): base styles for the application
+
+## License
+
+This project is released under the [MIT License](LICENSE).
 
 ## Todo
 
