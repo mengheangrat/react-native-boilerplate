@@ -1,26 +1,17 @@
-/* ***********************************************************
- * A short word on how to use this automagically generated file.
- * We're often asked in the ignite gitter channel how to connect
- * to a to a third party api, so we thought we'd demonstrate - but
- * you should know you can use sagas for other flow control too.
- *
- * Other points:
- *  - You'll need to add this saga to sagas/index.js
- *  - This template uses the api declared in sagas/index.js, so
- *    you'll need to define a constant in that file.
- *************************************************************/
-
-import { call, put } from 'redux-saga/effects';
-import AuthActions from '../Redux/AuthRedux';
+import { call, put } from 'redux-saga/effects'
+import AuthActions from '../Redux/AuthRedux'
+import { api } from '../Services/Api'
 
 // import { AnyAction } from 'redux';
-import { api } from '../Services/Api';
 
 // action: AnyAction
 export function* requestLogin() {
   try {
     // const data = action;
-    const respond = yield call(api().getCustomer);
-    yield put(AuthActions.loginSuccess(respond.data));
-  } catch (err) {}
+    const respond = yield call(api().getCustomer)
+    yield put(AuthActions.loginSuccess(respond.data))
+  } catch (err) {
+    console.log(err.message)
+    yield put(AuthActions.loginFailure())
+  }
 }
