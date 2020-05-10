@@ -1,6 +1,9 @@
-# react-native-boilerplate
+# React Native Boilerplate with Typescript
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/1ca9724768c5406e8c2a0b7cf7ffc2dd)](https://www.codacy.com/manual/mengheangrat/react-native-boilerplate?utm_source=github.com&utm_medium=referral&utm_content=mengheangrat/react-native-boilerplate&utm_campaign=Badge_Grade)
+
+## Overview 
+This React Native template for building solid applications through SOC(separation of concerns) between the View, state management and business logic.
 
 ## Using the boilerplate
 
@@ -10,6 +13,18 @@ To create a new project:
 - Remove the previous git history: `rm -rf .git/`
 - Install the npm dependencies by running `yarn`
 - Rename the project to your project name: `yarn run rename -- <YourProjectName>` (the default name is MyApp)
+
+## Content
+
+The boilerplate contains:
+* a React Native (v0.62.2)
+* Redux (v4.0.5) to help manage state
+* Redux Persist (v6.0.0) to persist the Redux state
+* Redux Sagas (v1.1.3) to separate side-effects and logic from state and View
+* React Navigation (v5) 
+* apisauce (1.1.1)
+* reduxsauce (v1.0.1) to facilitate using Redux
+* reselect (v4.0.0)
 
 ## Todo
 
