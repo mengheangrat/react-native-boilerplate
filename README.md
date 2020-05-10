@@ -35,7 +35,7 @@ The boilerplate contains:
 * [`App/Navigators`](App/Navigators): react navigation navigators 
 * [`App/Sagas`](App/Sagas): redux sagas
 * [`App/Services`](App/Services): application services, e.g. API clients
-* [`App/Stores`](App/Stores): redux [actions, reducers and stores](https://redux.js.org/basics)
+* [`App/Redux`](App/Redux): redux [actions, reducers and stores] merge into a file(https://redux.js.org/basics)
 * [`App/Theme`](App/Theme): base styles for the application
 
 ## License
