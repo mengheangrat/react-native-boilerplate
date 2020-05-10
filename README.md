@@ -6,10 +6,10 @@
 
 To create a new project:
 
-- clone this repository `git@github.com:mengheangrat/react-native-boilerplate.git`
-- remove the previous git history: rm -rf .git/
-- install the npm dependencies by running `yarn`
-- rename the project to your project name: `yarn run rename -- <YourProjectName>` (the default name is MyApp)
+- Clone this repository `git@github.com:mengheangrat/react-native-boilerplate.git`
+- Remove the previous git history: `rm -rf .git/`
+- Install the npm dependencies by running `yarn`
+- Rename the project to your project name: `yarn run rename -- <YourProjectName>` (the default name is MyApp)
 
 ## Todo
 
