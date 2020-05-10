@@ -4,7 +4,6 @@
 
 ## Todo
 
-<p>Config redux-persist </p>
 <p>Config react-native-localize</p>
 <p>Config react-native-config</p>
 <p>Config End-to-End with Detox</p>

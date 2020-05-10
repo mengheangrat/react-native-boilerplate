@@ -1,5 +1,7 @@
 import { combineReducers } from 'redux';
+import { persistReducer, persistStore } from 'redux-persist';
 import configureStore from './store';
+import { persistConfig } from '../Config/ReduxPersist';
 
 /* ------------- Assemble The Reducers ------------- */
 export const reducers = combineReducers({
@@ -7,9 +9,10 @@ export const reducers = combineReducers({
 });
 
 export default () => {
-  const finalReducers = reducers;
-
+  const finalReducers = persistReducer(persistConfig, reducers);
   let { store } = configureStore(finalReducers);
 
-  return store;
+  let persistor = persistStore(store);
+
+  return { store, persistor };
 };
