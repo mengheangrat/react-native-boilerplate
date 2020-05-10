@@ -8,17 +8,13 @@ import AuthStack from './AuthStack';
 const RootStack = createStackNavigator();
 
 function RootNavigationContainer() {
-  return (
-    <NavigationContainer>
-      <RootStack.Navigator>
-        <RootStack.Screen
-          name="AuthStack"
-          component={AuthStack}
-          options={{ headerShown: false }}
-        />
-      </RootStack.Navigator>
-    </NavigationContainer>
-  );
+    return (
+        <NavigationContainer>
+            <RootStack.Navigator>
+                <RootStack.Screen name="AuthStack" component={AuthStack} options={{ headerShown: false }} />
+            </RootStack.Navigator>
+        </NavigationContainer>
+    );
 }
 
 export default RootNavigationContainer;

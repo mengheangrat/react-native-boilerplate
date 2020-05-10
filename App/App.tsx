@@ -9,12 +9,12 @@ import RootNavigationContainer from './Navigators/RootNavigationContainer';
 const { store, persistor } = createStore();
 
 export default function App() {
-  return (
-    <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
-        <RootContainer />
-        <RootNavigationContainer />
-      </PersistGate>
-    </Provider>
-  );
+    return (
+        <Provider store={store}>
+            <PersistGate loading={null} persistor={persistor}>
+                <RootContainer />
+                <RootNavigationContainer />
+            </PersistGate>
+        </Provider>
+    );
 }
