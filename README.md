@@ -47,3 +47,4 @@ This project is released under the [MIT License](LICENSE).
 <p>Config react-native-localize</p>
 <p>Config react-native-config</p>
 <p>Config End-to-End with Detox</p>
+<p>Storybook</p>
