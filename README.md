@@ -38,6 +38,11 @@ The boilerplate contains:
 * [`App/Redux`](App/Redux): redux [actions, reducers and stores] merge into a file(https://redux.js.org/basics)
 * [`App/Theme`](App/Theme): base styles for the application
 
+## Contributors
+- Mengheang RAT - [GitHub](https://github.com/mengheangrat)
+- [YOUR NAME HERE] - Feel free to contribute to the codebase by resolving any open issues, refactoring, adding new features, writing test cases or any other way to make the project better and helpful to the community. Feel free to fork and send pull requests.
+
+
 ## License
 
 This project is released under the [MIT License](LICENSE).
