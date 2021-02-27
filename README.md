@@ -17,7 +17,7 @@ To create a new project:
 ## Content
 
 The boilerplate contains:
-* React Native (v0.63.2)
+* React Native (v0.63.4)
 * Redux (v4.0.5) to help manage state
 * Redux Persist (v6.0.0) to persist the Redux state
 * Redux Sagas (v1.1.3) to separate side-effects and logic from state and View
