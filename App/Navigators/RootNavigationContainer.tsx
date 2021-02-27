@@ -7,7 +7,7 @@ import AuthStack from './AuthStack';
 
 const RootStack = createStackNavigator();
 
-function RootNavigationContainer() {
+function RootNavigationContainer(): JSX.Element {
     return (
         <NavigationContainer>
             <RootStack.Navigator>
